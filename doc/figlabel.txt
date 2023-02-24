@@ -1,0 +1,15 @@
+==============================================================================
+Figlabel                                                            *figlabel*
+
+Figlabel appends a figlet created from the "label text" after the current
+line. The label is turned into a comment by prefixing each line with the
+"comment prefix".
+
+ Usage:
+    :Figlabel <label text> <comment prefix>
+
+    label text:     text string - escape spaces with a '\'
+                    for `\` use '\\'
+    comment prefix: comment prefix for language
+
+vim:tw=78:ts=8:noet:ft=help:norl:
