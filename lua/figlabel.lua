@@ -7,7 +7,7 @@
 
 local M = {}
 
-M.flabel = function (text, prefix)
+M.flabel = function(text, prefix)
   local fn = vim.fn
   -- get figlet output into a list
   local result = fn.systemlist('figlet '..text)
@@ -23,7 +23,7 @@ M.flabel = function (text, prefix)
 end
 
 -- create 'Figlabel' Ex command
-M.setup = function ()
+M.setup = function()
   vim.api.nvim_create_user_command("Figlabel",
     function(input)
       local text, prefix
@@ -38,9 +38,10 @@ M.setup = function ()
         text = args[1]
         prefix = args[2]
       end
-      require'figlabel'.flabel(text, prefix)
+      require('figlabel').flabel(text, prefix)
     end,
     {nargs = "+", desc = "create a figlet label", force = true})
+    print("added command Figlabel")
 end
 
 return M
