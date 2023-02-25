@@ -41,7 +41,6 @@ M.setup = function()
       require('figlabel').flabel(text, prefix)
     end,
     {nargs = "+", desc = "create a figlet label", force = true})
-    print("added command Figlabel")
 end
 
 return M
